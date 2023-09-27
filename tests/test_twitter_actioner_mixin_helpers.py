@@ -2,7 +2,7 @@
 
 import unittest
 
-from utils import Log, Twitter
+from utils_twitterimport Log, Twitter
 
 from utils_twitter.TwitterActionerMixinHelpers import (
     _update_profile_description, _update_status, _upload_media)

@@ -2,7 +2,7 @@
 
 import unittest
 
-from utils import Log, Tweet, Twitter
+from utils_twitterimport Log, Tweet, Twitter
 
 log = Log('test_twitter')
 
