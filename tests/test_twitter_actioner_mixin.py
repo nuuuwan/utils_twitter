@@ -1,8 +1,10 @@
-"""Tests for utils."""
+"""Tests for utils_base."""
 
 import unittest
 
-from utils_twitterimport Log, Tweet, Twitter
+from utils_base import Log
+
+from utils_twitter import Tweet, Twitter
 
 log = Log('test_twitter')
 

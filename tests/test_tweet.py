@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from utils_twitterimport Tweet
+from utils_twitter import Tweet
 
 
 class TestTweet(TestCase):

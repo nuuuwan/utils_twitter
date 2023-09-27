@@ -1,10 +1,6 @@
 """Implements twitter."""
 
-
-from utils.time.Time import Time
-from utils.time.TimeFormat import TimeFormat
-from utils.time.TIMEZONE_OFFSET import TIMEZONE_OFFSET
-from utils_base.Log import Log
+from utils_base import TIMEZONE_OFFSET, Log, Time, TimeFormat
 
 log = Log('Twitter')
 

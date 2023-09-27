@@ -1,9 +1,10 @@
-"""Tests for utils."""
+"""Tests for utils_base."""
 
 import unittest
 
-from utils_twitterimport Log, Twitter
+from utils_base import Log
 
+from utils_twitter import Twitter
 from utils_twitter.TwitterActionerMixinHelpers import (
     _update_profile_description, _update_status, _upload_media)
 

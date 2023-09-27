@@ -1,5 +1,5 @@
 import tweepy
-from utils_base.Log import Log
+from utils_base import Log
 
 log = Log('Twitter')
 
