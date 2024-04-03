@@ -3,7 +3,7 @@
 import setuptools
 
 DIST_NAME = 'utils_twitter'
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 DESCRIPTION = 'Utilities for Twitter'
 
 setuptools.setup(

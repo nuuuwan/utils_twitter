@@ -5,8 +5,7 @@ import unittest
 from utils_base import Log
 
 from utils_twitter import Twitter
-from utils_twitter.TwitterActionerMixinHelpers import (
-    _update_profile_description, _update_status, _upload_media)
+from utils_twitter import TwitterActionerMixinHelpers as helpers
 
 log = Log('test_twitter')
 
@@ -27,14 +26,14 @@ class TestActionerMixinHelpers(unittest.TestCase):
     @unittest.skip(SKIP_API_CREDENTIALS)
     def test_update_status(self):
         twitter = Twitter.from_environ_vars()
-        _update_status(twitter.api, TEST_QUOTE, [])
+        helpers._update_status(twitter.api, TEST_QUOTE, [])
 
     @unittest.skip(SKIP_API_CREDENTIALS)
     def test_upload_media(self):
         twitter = Twitter.from_environ_vars()
-        _upload_media(twitter.api, ['tests/data.png'])
+        helpers._upload_media(twitter.api, ['tests/data.png'])
 
     @unittest.skip(SKIP_API_CREDENTIALS)
     def test_update_profile_description(self):
         Twitter.from_environ_vars()
-        _update_profile_description()
+        helpers._update_profile_description()

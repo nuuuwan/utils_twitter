@@ -4,24 +4,24 @@
 import logging
 
 from utils_twitter.Tweet import Tweet
-from utils_twitter.TwitterActionerMixinHelpers import (
-    _update_profile_description, _update_status, _upload_media)
+from utils_twitter.TwitterActionerMixinHelpers import \
+    TwitterActionerMixinHelpers as helpers
 
 log = logging.getLogger(__name__)
 
 
 class TwitterActionerMixin:
     def send(self, tweet: Tweet):
-        media_ids = _upload_media(
+        media_ids = helpers._upload_media(
             self.api,
             tweet.image_file_path_list,
         )
-        return _update_status(
+        return helpers._update_status(
             self.api, tweet.text, media_ids, tweet.in_reply_to_status_id
         )
 
     def update_profile_description(self):
-        _update_profile_description(self.api)
+        helpers._update_profile_description(self.api)
 
     def update_profile_image(self, profile_image_file):
         log.debug(f'update_profile_image: {profile_image_file}')
